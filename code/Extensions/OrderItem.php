@@ -16,7 +16,7 @@ class OrderItem extends DataExtension
         'Placed_BuyableHash' => 'Text',
     ];
 
-    function onPlacement()
+    public function onPlacement()
     {
         if ($buyable = $this->owner->Buyable()) {
             $this->owner->Placed_BuyableHash = serialize($buyable);
@@ -27,4 +27,4 @@ class OrderItem extends DataExtension
     {
         return unserialize($this->owner->Placed_BuyableHash);
     }
-} 
+}

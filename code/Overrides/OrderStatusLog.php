@@ -30,7 +30,7 @@ class OrderStatusLog extends \OrderStatusLog
     {
         $class = $this->class;
         $this->class = 'OrderStatusLog';
-        if($className == __CLASS__) {
+        if ($className == __CLASS__) {
             $className = 'OrderStatusLog';
         }
         $response = parent::setClassName($className);
@@ -49,7 +49,7 @@ class OrderStatusLog extends \OrderStatusLog
             $this->Title = "Order Update";
         }
 
-        if(!$this->ClassName) {
+        if (!$this->ClassName) {
             $this->ClassName = 'OrderStatusLog';
         }
     }

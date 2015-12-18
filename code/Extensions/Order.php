@@ -12,7 +12,6 @@ use Object;
 use DataExtension;
 use FieldList;
 use ReadonlyField;
-
 use GridField;
 use GridFieldConfig_RecordEditor;
 use Milkyway\SS\GridFieldUtils\DisplayAsTimeline;
@@ -378,7 +377,7 @@ class Order extends DataExtension
             }
 
             if ($force || !empty($changes)) {
-                $log->log($event, ['ChangeLog' => $changes, 'Automated' => true,]);
+                $log->log($event, ['ChangeLog' => $changes, 'Automated' => true, ]);
 
                 if ($log->ID) {
                     $this->workingLogs[] = $log;
@@ -439,4 +438,4 @@ class Order extends DataExtension
 
         return $this->owner->BillingAddress();
     }
-} 
+}

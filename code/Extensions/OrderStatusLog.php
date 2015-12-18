@@ -28,17 +28,13 @@ use Email;
 use SSViewer;
 use Object;
 use DBField;
-
 use Select2Field;
 use TabbedSelectionGroup;
-
 use DataObjectPreviewField;
 use DataObjectPreviewer;
 use Milkyway\SS\Shop\OrderHistory\Preview\OrderStatusLog as Preview;
-
 use GatewayInfo;
 use GatewayMessage;
-
 use Order as OriginalOrder;
 use OrderItem as OriginalOrderItem;
 
@@ -581,7 +577,7 @@ class OrderStatusLog extends DataExtension
 
     public function onAfterWrite()
     {
-//        if (!$this->owner->Sent && $this->owner->Send && ($email = $this->owner->Email)) {
+        //        if (!$this->owner->Sent && $this->owner->Send && ($email = $this->owner->Email)) {
 //            $email->send();
 //
 //            $this->owner->Sent = \SS_Datetime::now()->Rfc2822();
